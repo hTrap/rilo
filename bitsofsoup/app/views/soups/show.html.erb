@@ -5,3 +5,8 @@
 <% else %>
 	<p>This soup is not in season, hence it sucks</p>
 <% end %>
+
+<%= link_to "Back to SoupCategories", categories_path %>
+<% if params[:admin] == "true" %>
+<p><%= link_to "Toggle Featured", toggle_featured_path(@soup) %></p>
+<% end %>
